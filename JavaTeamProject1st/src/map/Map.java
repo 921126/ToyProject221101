@@ -38,6 +38,7 @@ public class Map extends Player{
 		}	
 	}
 	
+	//맵 데이터 뿌리기
 	public void display() {
 		for(int i = 0; i<7; i++) {
 			for(int j = 0; j<7; j++) {
