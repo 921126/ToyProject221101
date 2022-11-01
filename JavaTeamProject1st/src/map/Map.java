@@ -2,7 +2,9 @@ package map;
 
 import java.util.Random;
 
-public class Map {
+import Person.Player;
+
+public class Map extends Player{
 	private String[][] map;
 	private boolean[][] monster;
 	private String shop;
@@ -38,10 +40,10 @@ public class Map {
 	public void display() {
 		for(int i = 0; i<7; i++) {
 			for(int j = 0; j<7; j++) {
-				if(map[i][j] == null) {
-					System.out.printf("%3s","□");
+				if(i == getX() && j == getY()) {
+					System.out.printf("%3s","■");
 				} else {
-					System.out.printf("%3s",map[i][j]);
+					System.out.printf("%3s","□");
 				}
 			}
 			System.out.println();
