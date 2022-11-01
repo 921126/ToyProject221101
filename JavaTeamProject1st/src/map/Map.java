@@ -3,8 +3,8 @@ package map;
 import java.util.Random;
 
 public class Map {
-   private String[][] map;
-   private boolean[][] monster;
+   public String[][] map;
+   public boolean[][] monster;
    private String shop;
    private String exit;
    private String player;
@@ -19,7 +19,7 @@ public class Map {
       map[0][0] = player;
       monster = new boolean[7][7];
       Random r = new Random();
-      for(int i =0; i<4; i++) {
+      for(int i =0; i<10; i++) {
           monster[r.nextInt(2, 7)][r.nextInt(2,7)] = true;
       }
       
@@ -63,4 +63,7 @@ public class Map {
       map[x][y] =null;
       
    }
+   
+   
+   
 }
