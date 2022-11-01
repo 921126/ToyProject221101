@@ -1,6 +1,9 @@
-package Person;
+package Battle;
 
 import java.util.Scanner;
+
+import Person.Monster;
+import Person.Player;
 
 
 public class Battle {
@@ -45,8 +48,6 @@ public class Battle {
 			System.out.println("플레이어 현재 상태 > : " + pHp);
 			System.out.println("몬스터 현재 체력 > : " + mHp);
 			
-			//가위바위보 구현
-			//내가 낼 거 선택
 			System.out.println("------------------------");
 			System.out.println("1. 가위 | 2. 바위 | 3. 보");
 			int num = scan.nextInt();
@@ -58,6 +59,7 @@ public class Battle {
 			int result = num - random;
 			
 			switch (result) {
+			
 			case 1: case -2:
 				System.out.println("이겼다!");
 				mHp -= pAttack;
@@ -68,6 +70,7 @@ public class Battle {
 					break Bt;
 				}
 				break;
+				
 			case -1: case 2:
 				System.out.println("졌다!");
 				pHp -= mAttack;
@@ -83,13 +86,6 @@ public class Battle {
 				break;
 			}
 		}
-		
-		
-
-		
+		scan.close();
 	}
-	
-	
-	
-	
 }
