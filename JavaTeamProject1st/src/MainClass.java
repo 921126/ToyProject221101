@@ -31,6 +31,7 @@ public class MainClass {
 			System.out.print("어디로 이동할까? >");
 			p.playerMove();
 			map.display(p.getX(),p.getY());
+			map.event(p.getX(),p.getY());
 			p.playerInfo();
 		}
 		
