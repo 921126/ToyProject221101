@@ -54,6 +54,7 @@ public class Shop extends Player{
 				System.out.println("[올바른 메뉴를 입력해주세요.]");
 				break;
 			}
+			scan.close();
 		}
 	}
 }
