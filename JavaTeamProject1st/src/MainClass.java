@@ -27,9 +27,11 @@ public class MainClass {
 		p.setName(name);
 		map.display();
 		
+		map.display();
 		while(true) {
 			System.out.print("어디로 이동할까? >");
 			p.playerMove();
+
 			map.display(p.getX(),p.getY());
 			map.event(p.getX(),p.getY());
 			p.playerInfo();
