@@ -25,11 +25,12 @@ public class MainClass {
 
 		//플레이어 이름 세팅
 		p.setName(name);
+		map.display();
 		
 		while(true) {
-			map.display();
 			System.out.print("어디로 이동할까? >");
-			map.playerMove();
+			p.playerMove();
+			map.display(p.getX(),p.getY());
 			p.playerInfo();
 		}
 		

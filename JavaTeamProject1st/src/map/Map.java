@@ -2,6 +2,7 @@ package map;
 
 import java.util.Random;
 
+
 public class Map {
 	private String[][] map;
 	private boolean[][] monster;
@@ -38,14 +39,25 @@ public class Map {
 	public void display() {
 		for(int i = 0; i<7; i++) {
 			for(int j = 0; j<7; j++) {
-				if(map[i][j] == null) {
+				if(map[i][j]==null) {
 					System.out.printf("%3s","□");
-				} else {
-					System.out.printf("%3s",map[i][j]);
-				}
+				}  else System.out.printf("%3s",map[i][j]);
 			}
 			System.out.println();
 		}
+	}
+	public void display(int x ,int y) {
+		map[x][y] = player;
+		if(x>0 || y>0) map[0][0]=null;
+		for(int i = 0; i<7; i++) {
+			for(int j = 0; j<7; j++) {
+				if(map[i][j]==null) {
+					System.out.printf("%3s","□");
+				}  else System.out.printf("%3s",map[i][j]);
+			}
+			System.out.println();
+		}
+		map[x][y]= null;
 	}
 	
 }
