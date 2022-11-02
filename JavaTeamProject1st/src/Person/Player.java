@@ -50,9 +50,11 @@ public class Player extends Common{
 
 	//메서드
 	public void playerInfo() {
+		System.out.println();
 		System.out.println(" = = = = = = = = 캐릭터 정보 = = = = = = = =");
 		System.out.println(" 이름:" + getName() + " ◆ " + "체력:" + getHp() + " ◆ " + "공격력:" + getAttack() + " ◆ " + "돈:" + getMoney() + "골드" );
 		System.out.println(" = = = = = = = = = = = = = = = = = = = = =");
+		System.out.println();
 	}
 
 	public void playerMove() {
