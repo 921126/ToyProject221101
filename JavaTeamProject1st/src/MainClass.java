@@ -27,12 +27,13 @@ public class MainClass {
 
 		//플레이어 이름 세팅
 		p.setName(name);
+		map.display();
 		
 		map.display();
 		while(set) {
 			System.out.print("어디로 이동할까? >");
 			p.playerMove();
-			
+
 			if(map.getMap()[p.getX()][p.getY()] == "●") {
 //			if(map.map[p.getX()][p.getY()] == "●") {
 				System.out.println("@@@@@@@@@@@@@@@탈출@@@@@@@@@@@@@@");
@@ -40,8 +41,8 @@ public class MainClass {
 			}
 			map.display(p.getX(), p.getY());
 			set = battle.checkBattle(p, map);
+
 			p.playerInfo();
-			
 			
 		}
 		
