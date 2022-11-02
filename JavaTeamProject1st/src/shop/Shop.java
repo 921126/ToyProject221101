@@ -6,24 +6,27 @@ import Battle.Battle;
 
 public class Shop extends Player{
 	public void hpPotion(Player p) {
+		int money = p.getMoney();
 			if(p.getMoney() >= 5) {
+				p.setMoney(money-5);
 				System.out.println("[체력 물약을 구매합니다.]");
 				if(p.getHp() > 4) {
+					p.setMoney(money-5);
 					p.setHp(10);
 				}else{
 				p.setHp(p.getHp()+5);
-				p.setMoney(getMoney()-5);
 				}
-			}else if(p.getMoney() < 5) {
+			}else if(money < 5) {
 			System.out.println("[골드가 부족합니다.]");
 		}
 	}
 	
 	public void attckPotion(Player p) {
-		if(p.getMoney() >= 10) {
+		int money = p.getMoney();
+		if(money >= 10) {
 			System.out.println("[공격력 물약을 구매합니다.]");
 			p.setAttack(p.getAttack()+1);
-			setMoney(p.getMoney()-10);
+			p.setMoney(money-10);
 		}else if(p.getMoney() < 10) {
 			System.out.println("[골드가 부족합니다.]");
 		}
