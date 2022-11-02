@@ -33,7 +33,7 @@ public class Battle {
 	
 	
 	public boolean checkBattle(Player p, Map m) {
-		if(m.monster[p.getX()][p.getY()] == true) {
+		if(m.getMonster()[p.getX()][p.getY()] == true) {
 			return battle(p, m);
 		}
 		return true;
@@ -100,7 +100,9 @@ public class Battle {
 					int ranMoney = (int)((Math.random()*10)+1);
 					p.setMoney(ranMoney);
 					System.out.println("승리 보상으로 "+ ranMoney + "원을 얻었습니다!");
-					m.monster[p.getX()][p.getY()] = false;
+					
+					m.getMonster()[p.getX()][p.getY()] = false;
+//					m.monster[p.getX()][p.getY()] = false;
 					return true;
 					
 				}
@@ -112,7 +114,6 @@ public class Battle {
 				if(p.getHp()<= 0) {
 					System.out.println("플레이어가 쓰러졌습니다.");
 					System.out.println("게임 오버");
-					m.monster[p.getX()][p.getY()] = false;
 					return false;
 				}
 				break;

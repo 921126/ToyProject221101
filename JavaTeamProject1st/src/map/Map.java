@@ -3,8 +3,8 @@ package map;
 import java.util.Random;
 
 public class Map {
-   public String[][] map;
-   public boolean[][] monster;
+   private String[][] map;
+   private boolean[][] monster;
    private String shop;
    private String exit;
    private String player;
@@ -61,8 +61,16 @@ public class Map {
          System.out.println();
       }
       map[x][y] =null;
-      
+  
    }
+	public String[][] getMap() {
+		return map;
+	}
+	public boolean[][] getMonster() {
+		return monster;
+	}
+   
+   
    
    
    

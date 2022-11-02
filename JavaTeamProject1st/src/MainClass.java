@@ -32,7 +32,9 @@ public class MainClass {
 		while(set) {
 			System.out.print("어디로 이동할까? >");
 			p.playerMove();
-			if(map.map[p.getX()][p.getY()] == "●") {
+			
+			if(map.getMap()[p.getX()][p.getY()] == "●") {
+//			if(map.map[p.getX()][p.getY()] == "●") {
 				System.out.println("@@@@@@@@@@@@@@@탈출@@@@@@@@@@@@@@");
 				break;
 			}
