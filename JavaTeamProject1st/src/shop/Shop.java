@@ -31,7 +31,7 @@ public class Shop extends Player{
 		}
 	}
 	
-	public void shop() {
+	public static void shop() {
 		boolean flag = true;
 		Scanner scan = new Scanner(System.in);
 		Shop shop = new Shop();
@@ -54,7 +54,6 @@ public class Shop extends Player{
 				System.out.println("[올바른 메뉴를 입력해주세요.]");
 				break;
 			}
-			scan.close();
 		}
 	}
 }
