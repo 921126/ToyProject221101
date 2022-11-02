@@ -48,7 +48,6 @@ public class MainClass {
 			System.out.print("\n"+"어디로 이동할까? >");
 			p.playerMove();
 
-			//탈출구문
 			if(map.getMap()[p.getX()][p.getY()] == "●") {
 				System.out.println("@@@@@@@@@@@@@@@탈출@@@@@@@@@@@@@@");
 				break;
