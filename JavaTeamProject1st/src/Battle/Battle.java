@@ -98,11 +98,12 @@ public class Battle {
 					System.out.println("몬스터가 쓰러졌습니다.");
 					System.out.println("===========전투 승리!!!===========");
 					int ranMoney = (int)((Math.random()*10)+1);
-					p.setMoney(ranMoney);
+					p.setMoney(p.getMoney() + ranMoney);
 					System.out.println("승리 보상으로 "+ ranMoney + "원을 얻었습니다!");
 					
 					m.getMonster()[p.getX()][p.getY()] = false;
 //					m.monster[p.getX()][p.getY()] = false;
+					m.display(p.getX(), p.getY());
 					return true;
 					
 				}
