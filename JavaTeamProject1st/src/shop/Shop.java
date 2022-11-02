@@ -22,7 +22,7 @@ public class Shop extends Player{
 		}
 
 	}
-
+}
 	
 	public void attckPotion(Player p) {
 		int money = p.getMoney();
