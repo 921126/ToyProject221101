@@ -75,18 +75,18 @@ public class Map {
 		}
 	}
 	//오브젝트를 만났을 때 이벤트 발생
-	public void event(int x , int y) {
-		if(x == shoplocation[0] && y ==shoplocation[1]) {
-			System.out.println("상점에 들어갑니다.");
-			Shop.shop();
-		} else if(x == exitlocation[0] && y ==exitlocation[1]) {
-			System.out.println("탈출합니다.");
-		} else if(monster[x][y] == true) {
-			System.out.println("야생의 몬스터를 만났습니다.");
-		} else {
-			
-		}
-	}
+//	public void event(int x , int y) {
+//		if(x == shoplocation[0] && y ==shoplocation[1]) {
+//			System.out.println("상점에 들어갑니다.");
+//			Shop.shop(p);
+//		} else if(x == exitlocation[0] && y ==exitlocation[1]) {
+//			System.out.println("탈출합니다.");
+//		} else if(monster[x][y] == true) {
+//			System.out.println("야생의 몬스터를 만났습니다.");
+//		} else {
+//			
+//		}
+//	}
 	//get 메서드
 	public String[][] getMap() {
 		return map;
