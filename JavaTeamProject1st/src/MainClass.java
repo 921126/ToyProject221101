@@ -55,14 +55,14 @@ public class MainClass {
 			
 			//상점 이벤트 발생
 			if(map.getMap()[p.getX()][p.getY()] == "▲") {
-				Shop.shop();
+				Shop.shop(p);
 			}
 			
 			//캐릭터 이동 맵 호출
 			map.display(p.getX(), p.getY());
 			set = battle.checkBattle(p, map);
 			//캐릭터 정보 호출
-
+			
 			p.playerInfo();
 		}
 		

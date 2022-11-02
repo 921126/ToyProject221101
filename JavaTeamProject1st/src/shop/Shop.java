@@ -1,37 +1,35 @@
 package shop;
 import java.util.Scanner;
 import Person.Player;
+import map.Map;
+import Battle.Battle;
 
 public class Shop extends Player{
-	int money = getMoney();
-	int hp = getHp();
-	int attack = getAttack();
-	
-	public void hpPotion() {
-			if(money >= 5) {
+	public void hpPotion(Player p) {
+			if(p.getMoney() >= 5) {
 				System.out.println("[체력 물약을 구매합니다.]");
-				if(hp > 4) {
-					hp = 10;
+				if(p.getHp() > 4) {
+					p.setHp(10);
 				}else{
-				hp += 5;
-				money -= 5;
+				p.setHp(p.getHp()+5);
+				p.setMoney(getMoney()-5);
 				}
-			}else if(money < 5) {
+			}else if(p.getMoney() < 5) {
 			System.out.println("[골드가 부족합니다.]");
 		}
 	}
 	
-	public void attckPotion() {
-		if(money >= 10) {
+	public void attckPotion(Player p) {
+		if(p.getMoney() >= 10) {
 			System.out.println("[공격력 물약을 구매합니다.]");
-			attack += 1;
-			money -= 10;
-		}else if(money < 10) {
+			p.setAttack(p.getAttack()+1);
+			setMoney(p.getMoney()-10);
+		}else if(p.getMoney() < 10) {
 			System.out.println("[골드가 부족합니다.]");
 		}
 	}
 	
-	public static void shop() {
+	public static void shop(Player p) {
 		boolean flag = true;
 		Scanner scan = new Scanner(System.in);
 		Shop shop = new Shop();
@@ -41,10 +39,10 @@ public class Shop extends Player{
 			int menu = scan.nextInt();
 			switch (menu) {
 			case 1:
-				shop.hpPotion();
+				shop.hpPotion(p);
 				break;
 			case 2:
-				shop.attckPotion();
+				shop.attckPotion(p);
 				break;
 			case 3:
 				System.out.println("[상점을 나갑니다.]");

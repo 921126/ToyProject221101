@@ -16,8 +16,8 @@ public class Map {
 	private int[] exitlocation;//탈출 위치
 	public Map() {
 		super();
-		shop = "☆";
-		exit = "★";
+		shop = "▲";
+		exit = "●";
 		player = "■";
 		shoplocation = new int[2];//x,y값
 		exitlocation = new int[2];//x,y값
@@ -78,7 +78,7 @@ public class Map {
 	public void event(int x , int y) {
 		if(x == shoplocation[0] && y ==shoplocation[1]) {
 			System.out.println("상점에 들어갑니다.");
-			Shop.shop();
+			Shop.shop(null);
 		} else if(x == exitlocation[0] && y ==exitlocation[1]) {
 			System.out.println("탈출합니다.");
 		} else if(monster[x][y] == true) {
