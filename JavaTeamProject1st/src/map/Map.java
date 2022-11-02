@@ -2,6 +2,8 @@ package map;
 
 import java.util.Random;
 
+import shop.Shop;
+
 
 public class Map {
 	private String[][] map;
@@ -72,6 +74,7 @@ public class Map {
 	public void event(int x , int y) {
 		if(x == shoplocation[0] && y ==shoplocation[1]) {
 			System.out.println("상점에 들어갑니다.");
+			Shop.shop();
 		} else if(x == exitlocation[0] && y ==exitlocation[1]) {
 			System.out.println("탈출합니다.");
 		} else if(monster[x][y] == true) {
