@@ -29,13 +29,13 @@ public class MainClass {
 		p.setName(name);
 		map.display();
 		
-		map.display();
+
 		while(set) {
 			System.out.print("어디로 이동할까? >");
+			
 			p.playerMove();
 
 			if(map.getMap()[p.getX()][p.getY()] == "●") {
-//			if(map.map[p.getX()][p.getY()] == "●") {
 				System.out.println("@@@@@@@@@@@@@@@탈출@@@@@@@@@@@@@@");
 				break;
 			}
@@ -45,9 +45,5 @@ public class MainClass {
 			p.playerInfo();
 			
 		}
-		
-		System.out.println("게임 종료");
-
-		
 	}
 }
