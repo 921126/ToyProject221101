@@ -4,6 +4,7 @@ import java.util.Random;
 
 
 public class Map {
+
 	private String[][] map;
 	private boolean[][] monster;
 	private String shop;
