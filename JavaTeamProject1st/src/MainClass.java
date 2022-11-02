@@ -62,7 +62,7 @@ public class MainClass {
 			map.display(p.getX(), p.getY());
 			set = battle.checkBattle(p, map);
 			//캐릭터 정보 호출
-
+			
 			p.playerInfo();
 		}
 		
