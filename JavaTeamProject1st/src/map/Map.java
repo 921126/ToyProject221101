@@ -87,6 +87,7 @@ public class Map {
 			
 		}
 	}
+
 	//get 메서드
 	public String[][] getMap() {
 		return map;

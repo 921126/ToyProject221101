@@ -48,13 +48,13 @@ public class MainClass {
 			System.out.print("\n"+"어디로 이동할까? >");
 			p.playerMove();
 
-			if(map.getMap()[p.getX()][p.getY()] == "●") {
+			if(map.getMap()[p.getX()][p.getY()] == "★") {
 				System.out.println("@@@@@@@@@@@@@@@탈출@@@@@@@@@@@@@@");
 				break;
 			}
 			
 			//상점 이벤트 발생
-			if(map.getMap()[p.getX()][p.getY()] == "▲") {
+			if(map.getMap()[p.getX()][p.getY()] == "☆") {
 				Shop.shop(p);
 			}
 			

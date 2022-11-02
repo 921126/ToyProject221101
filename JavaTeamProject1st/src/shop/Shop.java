@@ -5,6 +5,7 @@ import map.Map;
 import Battle.Battle;
 
 public class Shop extends Player{
+
 	public void hpPotion(Player p) {
 		int money = p.getMoney();
 			if(p.getMoney() >= 5) {
@@ -19,7 +20,9 @@ public class Shop extends Player{
 			}else if(money < 5) {
 			System.out.println("[골드가 부족합니다.]");
 		}
+
 	}
+}
 	
 	public void attckPotion(Player p) {
 		int money = p.getMoney();
@@ -39,7 +42,16 @@ public class Shop extends Player{
 		while(flag) {
 			System.out.println("[메뉴: 1.체력 물약 | 2.공격력 물약 | 3. 나가기]");
 			System.out.print("메뉴 > ");
-			int menu = scan.nextInt();
+			
+			int menu;
+			try {
+				menu = scan.nextInt();
+			} catch (Exception e) {
+				System.out.println("1~3 숫자로 다시 입력하세요!");
+				scan.nextLine();
+				continue;
+			}
+			
 			switch (menu) {
 			case 1:
 				shop.hpPotion(p);
