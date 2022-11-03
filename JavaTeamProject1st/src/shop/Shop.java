@@ -22,7 +22,7 @@ public class Shop extends Player{
 		}
 
 	}
-}
+
 	
 	public void attckPotion(Player p) {
 		int money = p.getMoney();
@@ -40,7 +40,7 @@ public class Shop extends Player{
 		Scanner scan = new Scanner(System.in);
 		Shop shop = new Shop();
 		while(flag) {
-			System.out.println("[메뉴: 1.체력 물약 | 2.공격력 물약 | 3. 나가기]");
+			System.out.println("[메뉴: 1.체력 물약(5 골드) | 2.공격력 물약(10 골드) | 3. 나가기]");
 			System.out.print("메뉴 > ");
 			
 			int menu;

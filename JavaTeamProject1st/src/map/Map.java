@@ -14,6 +14,13 @@ public class Map {
 	private String player;
 	private int[] shoplocation;//상점 위치
 	private int[] exitlocation;//탈출 위치
+	
+	public void clear() {
+		for(int i = 0; i < 80; i++) {
+			System.out.println();
+		}
+	}
+	
 	public Map() {
 		super();
 		shop = "▲";
@@ -28,7 +35,7 @@ public class Map {
 		monster = new boolean[7][7];
 		Random r = new Random();
 		//몬스터의 위치 생성(랜덤)
-		for(int i =0; i<10; i++) {
+		for(int i =0; i<15; i++) {
 			 monster[r.nextInt(2, 7)][r.nextInt(2,7)] = true;
 		}
 		//오브젝트 생성 - 몬스터의 위치와 중복되지 않는 로직

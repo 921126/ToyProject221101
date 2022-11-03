@@ -8,6 +8,7 @@ public class Player extends Common{
 	private int money = 0;
 	private int x = 0;
 	private int y = 0;
+	private int life = 0;
 
 	//생성자
 	public Player() {
@@ -47,13 +48,26 @@ public class Player extends Common{
 	public void setY(int y) {
 		this.y = y;
 	}
+		
+	public int getlife() {
+		return life;
+	}
+	
+	public void setlife(int life) {
+		this.life = life;
+	}
 
 	//메서드
 	public void playerInfo() {
 		System.out.println();
-		System.out.println(" = = = = = = = = 캐릭터 정보 = = = = = = = =");
+		System.out.println(" = = = = = = = 캐릭터 정보 = = = = = = =");
 		System.out.println(" 이름:" + getName() + " ◆ " + "체력:" + getHp() + " ◆ " + "공격력:" + getAttack() + " ◆ " + "돈:" + getMoney() + "골드" );
-		System.out.println(" = = = = = = = = = = = = = = = = = = = = =");
+		System.out.println(" = = = = = = = = = = = = = = = = = = =");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
 		System.out.println();
 	}
 
