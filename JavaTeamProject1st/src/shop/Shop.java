@@ -14,8 +14,10 @@ public class Shop extends Player{
 				if(p.getHp() > 4) {
 					p.setMoney(money-5);
 					p.setHp(10);
+					System.out.println("현재 남은 골드: " + p.getMoney()); 
 				}else{
 				p.setHp(p.getHp()+5);
+				System.out.println("현재 남은 골드: " + p.getMoney());
 				}
 			}else if(money < 5) {
 			System.out.println("[골드가 부족합니다.]");
@@ -28,8 +30,9 @@ public class Shop extends Player{
 		int money = p.getMoney();
 		if(money >= 10) {
 			System.out.println("[공격력 물약을 구매합니다.]");
-			p.setAttack(p.getAttack()+1);
+			p.setAttack(p.getAttack()+2);
 			p.setMoney(money-10);
+			System.out.println("현재 남은 골드: " + p.getMoney());
 		}else if(p.getMoney() < 10) {
 			System.out.println("[골드가 부족합니다.]");
 		}
@@ -40,7 +43,9 @@ public class Shop extends Player{
 		Scanner scan = new Scanner(System.in);
 		Shop shop = new Shop();
 		while(flag) {
-			System.out.println("[메뉴: 1.체력 물약(5 골드) | 2.공격력 물약(10 골드) | 3. 나가기]");
+			p.playerInfo();
+			System.out.println();
+			System.out.println("[메뉴: 1.체력 물약(5 골드, HP+5) | 2.공격력 물약(10 골드, ATK+2) | 3. 나가기]");
 			System.out.print("메뉴 > ");
 			
 			int menu;
